@@ -1,17 +1,7 @@
 def roman_encode(msg)
-    count = 0
-    msg.each_char do |c|
-        msg[count] = (c.ord + 5).chr
-        count += 1
-    end
-    msg
+    {msg => msg.tr('A-Za-z', 'F-ZA-Ef-za-e')}
 end
 
 def roman_decode(msg)
-    count = 0
-    msg.each_char do |c|
-        msg[count] = (c.ord - 5).chr
-        count += 1
-    end
-    msg
+    {msg => msg.tr('F-ZA-Ef-za-e', 'A-Za-z')}
 end
