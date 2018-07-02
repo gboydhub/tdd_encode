@@ -28,4 +28,8 @@ class TestRomanEncode < Minitest::Test
     assert_equal(['Jga vjgtg'], roman_encode([some_message]))
     assert_equal(['Hey there'], roman_decode(['Jga vjgtg']))
   end
+
+  def test_array_messages
+    assert_equal(['cd', 'ef'], roman_encode(['ab', 'cd']))
+  end
 end
