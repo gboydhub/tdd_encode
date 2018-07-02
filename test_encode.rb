@@ -17,4 +17,8 @@ class TestRomanEncode < Minitest::Test
   def test_encode_shifts_2_letters_by_5
     assert_equal('fg', roman_encode('ab'))
   end
+
+  def test_decode_unshifts
+    assert_equal('ab', roman_decode('fg'))
+  end
 end
