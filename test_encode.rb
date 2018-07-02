@@ -7,6 +7,6 @@ class TestFetchCode < Minitest::Test
   end
 
   def test_encode_returns_string
-    assert_equal(String, roman_encode(""))
+    assert_equal(String, roman_encode("").class)
   end
 end
