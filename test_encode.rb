@@ -11,21 +11,21 @@ class TestRomanEncode < Minitest::Test
   end
 
   def test_encode_shifts_by_5
-    assert_equal(['f'], roman_encode(['a']))
+    assert_equal(['c'], roman_encode(['a']))
   end
 
   def test_encode_shifts_2_letters_by_5
-    assert_equal(['fg'], roman_encode(['ab']))
+    assert_equal(['cd'], roman_encode(['ab']))
   end
 
   def test_decode_unshifts
-    assert_equal(['ab'], roman_decode(['fg']))
+    assert_equal(['ab'], roman_decode(['cd']))
   end
 
   def test_complex_encode_decode
-    some_message = "Kill kill"
+    some_message = "Hey there"
 
-    assert_equal(['Pnqq pnqq'], roman_encode([some_message]))
-    assert_equal(['Kill kill'], roman_decode(['Pnqq pnqq']))
+    assert_equal(['Jga vjgtg'], roman_encode([some_message]))
+    assert_equal(['Hey there'], roman_decode(['Jga vjgtg']))
   end
 end
