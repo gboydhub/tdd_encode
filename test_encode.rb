@@ -31,5 +31,6 @@ class TestRomanEncode < Minitest::Test
 
   def test_array_messages
     assert_equal(['cd', 'ef'], roman_encode(['ab', 'cd']))
+    assert_equal(['ab', 'cd'], roman_decode(['cd', 'ef']))
   end
 end
