@@ -1,5 +1,5 @@
-def roman_encode(msg)
-    shift_start = Time.new.day % 26
+def roman_encode(msg, key=Time.new.day)
+    shift_start = key % 26
     shift_cap = (shift_start + 'A'.ord)
     shift_sm = (shift_start + 'a'.ord)
 
@@ -10,8 +10,8 @@ def roman_encode(msg)
     new_arr
 end
 
-def roman_decode(msg)
-    shift_start = Time.new.day % 26
+def roman_decode(msg, key=Time.new.day)
+    shift_start = key % 26
     shift_cap = (shift_start + 'A'.ord)
     shift_sm = (shift_start + 'a'.ord)
 
@@ -21,4 +21,3 @@ def roman_decode(msg)
     end
     new_arr
 end
-#Time.new.day
